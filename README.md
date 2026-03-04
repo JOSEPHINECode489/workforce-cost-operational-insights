@@ -3,7 +3,7 @@
                                 Power BI | Star Schema | DAX | Time Intelligence
                Project Overview
 
-This project demonstrates a Business Intelligence solution designed to monitor workforce cost allocation, departmental expenditure, geographic distribution, and monthly salary trends to support operational planning and cost control.
+This Business Intelligence project demonstrates the design and implementation of a scalable workforce cost analytics solution using Power BI. The solution incorporates dimensional modelling, DAX-based performance measures, and time intelligence to deliver structured operational insights.
 
                 Business Objective
 
@@ -31,12 +31,21 @@ Single-direction filtering
 
 Dedicated Date dimension for time intelligence optimisation
 
+<img width="1920" height="1080" alt="Screenshot (213)" src="https://github.com/user-attachments/assets/ab49e748-1128-41ba-a8df-b2f9774f2836" />
+
+
                  📊 Key DAX Measures
 Total Salary = SUM(Fact_workforce[Salary])
 Headcount = DISTINCTCOUNT(Fact_workforce[EmployeeID])
 Average Salary = AVERAGE(Fact_workforce[Salary])
 Salary YTD = TOTALYTD(SUM(Fact_workforce[Salary]), Dim_Date[Date])
 
+                    
+                    Dashboard Overview
+<img width="1920" height="1080" alt="Screenshot (212)" src="https://github.com/user-attachments/assets/e2cf2510-f68a-4c5a-bc1b-f8d11acbc5cf" />
+
+
+                  
                    Key Insights
 
 January recorded a peak salary expenditure before declining through March.
@@ -46,6 +55,7 @@ Department 2 has the highest allocation of workforce costs.
 Bristol represents the largest salary distribution across cities.
 
 
+                  
                   Data Governance & Best Practices
 
 Structured dimensional modelling
